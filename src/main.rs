@@ -20,11 +20,39 @@ fn main() {
 pub fn attack<E: ark_ec::PairingEngine>(ck: &CommitmentKey<E>, dim: usize) -> attack::Attack<E> {
     // your code here
     use ark_std::Zero;
+    //use std::collections::HashMap;
+    use ark_std::UniformRand;
+    use crate::algorithms::ILV;
+    use ark_ec::AffineCurve;
+
+    // Realizing that Bob was not careful setting the trusted setup, 
+    // And also did not include tests for the SRS
+    // he ended up giving us the element beta^(dim+1) * G
+    // which is the worst thing Bob could have done. 
+    let g_beta_dim_plus_one = ck.powers_of_beta_g_first[dim+1];
+    
+    // Set up the attack
+    // a and b can be any vectors. To demonstrate, we will take a random a. 
+    let mut rng = ark_std::test_rng();
+    let a = (0..dim).map(|_| E::Fr::rand(&mut rng)).collect::<Vec<_>>();
+    let commitment = ILV::commit(ck, &a);
+
+    let b = attack::hash(commitment, dim);
+
+    // Get a real proof for the real inner product
+    let actual_proof = ILV::open(ck, &a, &b);
+    let actual_inner_product = a.iter().zip(b.iter()).map(|(&a, b)| a * b).sum::<E::Fr>();
+
+    // Subtrack the real inner product using index
+    let attack_shift = g_beta_dim_plus_one.mul(actual_inner_product);
+    let new_polyomial = actual_proof.0 + attack_shift.into();
+    let proof = Proof(new_polyomial);
+
     attack::Attack {
-        a: vec![],
-        commitment: Commitment(E::G1Affine::zero()),
+        a,
+        commitment,
         claimed_inner_product: E::Fr::zero(),
-        proof: Proof(E::G1Affine::zero()),
+        proof: proof,
     }
 }
 
