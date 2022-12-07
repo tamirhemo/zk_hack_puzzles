@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "puzzle_1_zero_sum",
+    "puzzle_2_power_corrupts",
+    "puzzle_2_power_corrupts/bls12_cheon",
+]
+
+[patch.crates-io]
+ark-bls12-cheon = {path = "puzzle_2_power_corrupts/bls12_cheon"}

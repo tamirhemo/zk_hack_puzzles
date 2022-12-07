@@ -17,7 +17,7 @@ rand="0.8.3"
 prompt = { git = "https://github.com/kobigurk/zkhack-prompt" }
 
 [patch.crates-io]
-ark-bls12-cheon = {path = "bls12_cheon"}
+#ark-bls12-cheon = {path = "bls12_cheon"}
 ark-ec = { git = "https://github.com/arkworks-rs/algebra", branch="release-0.4" }
 ark-ff = { git = "https://github.com/arkworks-rs/algebra", branch="release-0.4" }
 ark-serialize = { git = "https://github.com/arkworks-rs/algebra", branch="release-0.4" }
