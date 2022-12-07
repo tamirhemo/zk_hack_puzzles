@@ -1,4 +1,4 @@
-# ZK Hack Puzzle Solutions
+# ZK Hack III Puzzle Solutions
 
 This repository contains solutions and write-ups for puzzles given as part of the [ZK Hack III online event](https://zkhack.dev/zkhackIII/).
 
