@@ -43,7 +43,7 @@ https://github.com/arkworks-rs/marlin/blob/master/diagram/diagram.pdf.
 
 
 ## Puzzle 2 - Power Corrupts
-This puzzle is based on the [Cheon attack](http://www.math.snu.ac.kr/~jhcheon/publications/2010/StrongDH_JoC_Final2.pdf) exploiting public information in certain set-ups for some modern cryptographic protocols. For an explanation of the puzzle and its solution, including a background of the underlying cryptography, see [`puzzle 2 README`](./puzzle_2_zero_sum/README.md). 
+This puzzle is based on the [Cheon attack](http://www.math.snu.ac.kr/~jhcheon/publications/2010/StrongDH_JoC_Final2.pdf) exploiting public information in certain set-ups for some modern cryptographic protocols. For an explanation of the puzzle and its solution, including a background of the underlying cryptography, see [`puzzle 2 README`](./puzzle_2_power_corrupts/README.md). 
 
 ```
 $ cargo run --bin blstest --release
