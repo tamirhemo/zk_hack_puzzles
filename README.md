@@ -5,8 +5,7 @@ This repository contains solutions and write-ups for puzzles given as part of th
 Each folder contains a README file with an description of the puzzle and an explanation of the solution and some of the necessary background needed to understand it. 
 
 ## Puzzle 1 - Zero Sum Game
-This puzzle is about a faulty implementation of a system based on the cryptographic sum-check protocol. For an explanation of the puzzle solution 
-with the background see [`puzzle 1 README`] (`./system/puzzle_1_zero_sum/README.md). 
+This puzzle is about a faulty implementation of a system based on the cryptographic sum-check protocol. For an explanation of the puzzle solution, including a background of the underlying cryptography, see [`puzzle 1 README`](./puzzle_1_zero_sum/README.md). 
 
 To run the solution code for this puzzle: 
 ```
@@ -44,7 +43,7 @@ https://github.com/arkworks-rs/marlin/blob/master/diagram/diagram.pdf.
 
 
 ## Puzzle 2 - Power Corrupts
-This puzzle is based on the Cheon attack. 
+This puzzle is based on the [Cheon attack](http://www.math.snu.ac.kr/~jhcheon/publications/2010/StrongDH_JoC_Final2.pdf) exploiting public information in certain set-ups for some modern cryptographic protocols. For an explanation of the puzzle and its solution, including a background of the underlying cryptography, see [`puzzle 2 README`](./puzzle_2_zero_sum/README.md). 
 
 ```
 $ cargo run --bin blstest --release
