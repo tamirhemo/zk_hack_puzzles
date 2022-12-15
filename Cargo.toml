@@ -3,6 +3,7 @@ members = [
     "puzzle_1_zero_sum",
     "puzzle_2_power_corrupts",
     "puzzle_2_power_corrupts/bls12_cheon",
+    "puzzle_3_bigger_is_better",
 ]
 
 [patch.crates-io]

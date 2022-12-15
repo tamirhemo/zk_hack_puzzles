@@ -393,6 +393,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
+name = "ipa-puzzle"
+version = "0.1.0"
+dependencies = [
+ "ark-bls12-381",
+ "ark-ec 0.3.0",
+ "ark-ff 0.3.0",
+ "ark-poly 0.3.0",
+ "ark-serialize 0.3.0",
+ "ark-std 0.3.0",
+ "blake2",
+ "digest 0.9.0",
+ "prompt",
+ "rand_chacha",
+]
+
+[[package]]
 name = "itertools"
 version = "0.10.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
