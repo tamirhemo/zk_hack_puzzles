@@ -1,6 +1,6 @@
 # ZK Hack III Puzzle Solutions
 
-This repository contains solutions and write-ups for puzzles given as part of the [ZK Hack III online event](https://zkhack.dev/zkhackIII/). Currently there are solutions for the first two puzzles. The solution to the third puzzle will be uploaded after the submission period is done. 
+This repository contains solutions and write-ups for puzzles given as part of the [ZK Hack III online event](https://zkhack.dev/zkhackIII/). 
 
 Each folder contains a README file with an description of the puzzle and an explanation of the solution and some of the necessary background needed to understand it. 
 
